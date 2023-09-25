@@ -53,7 +53,7 @@ const Torta = () => {
               <td scope='row'>
                 Promjer 18 cm | Visina 15 cm
               </td>
-              <td>
+              <td className='cijenaText'>
               {torta.dimenzija18} KM
               </td>
             </tr>
@@ -61,7 +61,7 @@ const Torta = () => {
             <td>
                 Promjer 22 cm | Visina 15 cm
               </td>
-              <td>
+              <td className='cijenaText'>
               {torta.dimenzija22} KM
               </td>
             </tr>
@@ -69,7 +69,7 @@ const Torta = () => {
             <td>
                 Promjer 24 cm | Visina 15 cm
               </td>
-              <td>
+              <td className='cijenaText'>
               {torta.dimenzija24} KM
               </td>
             </tr>

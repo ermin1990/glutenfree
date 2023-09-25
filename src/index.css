@@ -20,6 +20,9 @@ code {
 .navMenuItem {
     padding: 0.8rem;
     border-radius: 0.8rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.2rem;
 }
 
 .navMenuItem:hover {
@@ -36,4 +39,9 @@ code {
 
 .torta:hover {
     background-color: rgb(245, 242, 235);
+}
+
+.cijenaText {
+    text-align: right;
+    font-weight: bolder;
 }
