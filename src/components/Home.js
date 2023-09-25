@@ -10,7 +10,7 @@ function Home() {
         .then(data => setTorte(data.data));
     }, []);
 
-    console.log(torte)
+   
 
   // Dodajte proveru da li su podaci o tortama dostupni
   if (torte === null) {
@@ -22,8 +22,8 @@ function Home() {
       <div className="text-center mt-3"><h3>Torte</h3></div>
       <div className="torte">
         {torte.map((torta) => (
-            <Link className="nav-link" to={`/torte/${torta.Id}`}>
-          <li className="nav-link" key={torta.naziv}>
+            <Link className="nav-link" key={torta.Id} to={`/torte/${torta.Id}`}>
+          <li className="nav-link" >
             <h3>{torta.Naziv}</h3>
             <p>{torta.Opis}</p>            
           </li>
