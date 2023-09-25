@@ -47,3 +47,8 @@ code {
     text-align: right;
     font-weight: bolder;
 }
+
+.loader {
+    width: 300px;
+    height: auto;
+}
