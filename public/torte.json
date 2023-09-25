@@ -3,9 +3,9 @@
         "naziv": "Čokoladna ekstaza",
         "opis": "Bogata čokoladna torta s hrskavom korom i sočnim čokoladnim prelivom.",
         "cijene": {
-            "18cm": 35.00,
-            "22cm": 45.00,
-            "24cm": 55.00
+            "18cm": 35,
+            "22cm": 45,
+            "24cm": 55
         },
         "alergeni": ["jaja", "mleko"]
     },
@@ -14,9 +14,9 @@
         "naziv": "Limun torta",
         "opis": "Osvežavajuća torta sa svežim limunom i kremastim filom.",
         "cijene": {
-            "18cm": 30.00,
-            "22cm": 40.00,
-            "24cm": 50.00
+            "18cm": 30,
+            "22cm": 40,
+            "24cm": 50
         },
         "alergeni": ["jaja", "mleko"]
     },
@@ -25,9 +25,9 @@
         "naziv": "Vanila malina",
         "opis": "Nežna vanila torta sa slojem malina i kremastim prelivom.",
         "cijene": {
-            "18cm": 32.00,
-            "22cm": 42.00,
-            "24cm": 52.00
+            "18cm": 32,
+            "22cm": 42,
+            "24cm": 52
         },
         "alergeni": ["jaja", "mleko", "bademi"]
     }, {
@@ -35,9 +35,9 @@
         "naziv": "Karamelna indulgencija",
         "opis": "Torta sa slojem karamel kreme i prelivom, posuta hrskavim karamelom.",
         "cijene": {
-            "18cm": 38.00,
-            "22cm": 48.00,
-            "24cm": 58.00
+            "18cm": 38,
+            "22cm": 48,
+            "24cm": 58
         },
         "alergeni": ["jaja", "mleko"]
     }, {
@@ -45,9 +45,9 @@
         "naziv": "Jagoda fantazija",
         "opis": "Sveže jagode na kremastoj podlozi sa hrskavim keksom.",
         "cijene": {
-            "18cm": 33.00,
-            "22cm": 43.00,
-            "24cm": 53.00
+            "18cm": 33,
+            "22cm": 43,
+            "24cm": 53
         },
         "alergeni": ["jaja", "mleko"]
     }

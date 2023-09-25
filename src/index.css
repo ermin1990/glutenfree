@@ -14,3 +14,20 @@ code {
     width: 300px;
     height: auto;
 }
+
+.navMenuItem {
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+}
+
+.navMenuItem:hover {
+    background-color: #beaeae;
+}
+
+.active {
+    background: #beaeae;
+}
+
+.tabela {
+    background-color: #EDE0E0 !important;
+}
