@@ -28,7 +28,7 @@ if (torte === null) {
   }
 
   return (
-    <div>
+    <div className='p-2'>
       <h1>{selectedTorta.naziv}</h1>
       <p>{selectedTorta.opis}</p>
       <p>Cene (18cm/22cm/24cm): {selectedTorta.cijene["18cm"]} KM / {selectedTorta.cijene["22cm"]} KM / {selectedTorta.cijene["24cm"]} KM</p>

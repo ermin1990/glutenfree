@@ -7,7 +7,6 @@ import routes from './routes/routes'
 
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Logo from './components/Logo';
 
 const router = createBrowserRouter(routes)
 

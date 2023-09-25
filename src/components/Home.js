@@ -11,13 +11,13 @@ function Home() {
 
   // Dodajte proveru da li su podaci o tortama dostupni
   if (torte === null) {
-    return <div className='container'>Podaci se učitavaju, molimo Vas sačekajte!</div>;
+    return <div className=''>Podaci se učitavaju, molimo Vas sačekajte!</div>;
   }
 
   return (
-    <div>
+    <div className="p-2">
       <div className="text-center mt-3"><h3>Torte</h3></div>
-      <div className="torte container">
+      <div className="torte">
         {torte.map((torta) => (
             <a className="nav-link" href={`/torte/${torta.id}`}>
           <li className="nav-link" key={torta.naziv}>
