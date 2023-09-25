@@ -15,15 +15,9 @@ const Torta = () => {
     setTorta(json.data[id - 1]);
   };
 
- 
-  console.log(torta);
-
-
-
-  useEffect(() => {
+   useEffect(() => {
     fetchData();
   }, [id]); // Dodajte id u zavisnosti kako bi se fetchData pozvala kada se promeni id
-
 
   if (!torta) {
     return <div className='container text-center'>
@@ -35,7 +29,7 @@ const Torta = () => {
 
     return (
       <div className='p-2'>
-        <h1 className='text-center text-uppercase font-weight-light'>{torta.Naziv}</h1>
+        <h1 className='text-center text-uppercase font-weight-light text-balance'>{torta.Naziv}</h1>
         <hr />
         <p className='mb-3'>{torta.Opis}</p>
                

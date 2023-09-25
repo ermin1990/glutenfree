@@ -15,8 +15,8 @@ function Menu() {
     <ul className="navbar-nav d-flex flex-row gap-2">
         <NavLink to="/" className="nav-link m-0 navMenuItem"><BiSolidCake/> Početna</NavLink>
         <NavLink to="/about" className="nav-link m-0 navMenuItem"><MdWoman/> O meni</NavLink>
-      
     </ul>
+    
  
 </nav>
 </>

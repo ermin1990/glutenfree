@@ -23,6 +23,8 @@ code {
     display: flex;
     align-items: baseline;
     gap: 0.2rem;
+    background-color: #decfcf;
+    text-wrap: balance
 }
 
 .navMenuItem:hover {
