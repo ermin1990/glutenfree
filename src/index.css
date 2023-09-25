@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Varela Round', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #EDE0E0;
+    font-size: 0.9rem;
 }
 
 code {
@@ -30,4 +32,8 @@ code {
 
 .tabela {
     background-color: #EDE0E0 !important;
+}
+
+.torta:hover {
+    background-color: rgb(245, 242, 235);
 }

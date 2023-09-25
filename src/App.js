@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router";
 import Menu from "./components/Menu";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <div className="container">
     <Menu/>
     <Outlet/>
+    <Footer/>
     </div>
     </>
   );

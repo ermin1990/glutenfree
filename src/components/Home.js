@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
+import Loader from "./Loader";
 
 function Home() {
     const [torte, setTorte] = useState([]);
@@ -13,8 +14,10 @@ function Home() {
    
 
   // Dodajte proveru da li su podaci o tortama dostupni
-  if (torte === null) {
-    return <div className='btn btn-info'>Podaci se učitavaju, molimo Vas sačekajte!</div>;
+  if (!torte) {
+    return <div className='container text-center'>
+      <Loader />
+    </div>;
   }
 
   return (
@@ -22,7 +25,7 @@ function Home() {
       <div className="text-center mt-3"><h3>Torte</h3></div>
       <div className="torte">
         {torte.map((torta) => (
-            <Link className="nav-link" key={torta.Id} to={`/torte/${torta.Id}`}>
+            <Link className="nav-link torta p-2 rounded" key={torta.Id} to={`/torte/${torta.Id}`}>
           <li className="nav-link" >
             <h3>{torta.Naziv}</h3>
             <p>{torta.Opis}</p>            
