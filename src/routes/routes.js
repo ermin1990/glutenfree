@@ -15,7 +15,7 @@ const routes = [
         ]
     },
     {
-        path: `/:id`,
+        path: `/torte/:id`,
         element: <Torta />,
     },
 ]

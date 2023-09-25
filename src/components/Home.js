@@ -19,7 +19,7 @@ function Home() {
       <div className="text-center mt-3"><h3>Torte</h3></div>
       <div className="torte container">
         {torte.map((torta) => (
-            <a className="nav-link" href={`/${torta.id}`}>
+            <a className="nav-link" href={`/torte/${torta.id}`}>
           <li className="nav-link" key={torta.naziv}>
             <h3>{torta.naziv}</h3>
             <p>{torta.opis}</p>            
