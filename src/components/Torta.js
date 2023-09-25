@@ -1,21 +1,22 @@
 // Torta.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 
 const Torta = () => {
 
     const { id } = useParams();
-    const [torte, setTorte] = React.useState(null);
+    const [torte, setTorte] = useState([]);
 
     useEffect(() => {
-        fetch("./torte.json")
-          .then(response => response.json())
-          .then(data => setTorte(data));
-      }, []);
+      fetch("https://raw.githubusercontent.com/ermin1990/glutenfree/master/public/torte.json")
+        .then(response => response.json())
+        .then(data => setTorte(data));
+    }, []);
 
 // Dodajte proveru da li su podaci o tortama dostupni
 if (torte === null) {
-    return <div>Loading...</div>;
+    return <div className='container'>Podaci se učitavaju, molimo Vas sačekajte!</div>;
   }
 
 

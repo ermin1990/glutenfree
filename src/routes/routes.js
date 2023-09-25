@@ -5,24 +5,19 @@ import Torta from "../components/Torta";
 
 const routes = [
     {
-        path: "/",
+        path: "",
         element: <App />,
-        children:[
+        children: [
             {
-                path:"",
-                element:<Home/>
-            },
-            {
-                path: `/torte/:id`,
-                element: <Torta />,
-                
+                path: "",
+                element: <Home />
             },
         ]
-        
     },
-    
-
-
+    {
+        path: `/:id`,
+        element: <Torta />,
+    },
 ]
 
 export default routes

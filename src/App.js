@@ -1,11 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router";
+import Logo from "./components/Logo";
+import Menu from "./components/Menu";
 
 function App() {
 
   return (
     <>
-    <div className="logo"><img src="./logo.png" alt="" /></div>
+    <Logo/>
+    <Menu/>
     <Outlet/>
     </>
   );

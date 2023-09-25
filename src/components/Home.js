@@ -1,37 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function Home() {
-  const [torte, setTorte] = React.useState(null);
+    const [torte, setTorte] = useState([]);
 
-  function handleClick(torta) {
-    setTorte(torta);
-  }
-
-  useEffect(() => {
-    fetch("./torte.json")
-      .then(response => response.json())
-      .then(data => setTorte(data));
-  }, []);
+    useEffect(() => {
+      fetch("https://raw.githubusercontent.com/ermin1990/glutenfree/master/public/torte.json")
+        .then(response => response.json())
+        .then(data => setTorte(data));
+    }, []);
 
   // Dodajte proveru da li su podaci o tortama dostupni
   if (torte === null) {
-    return <div>Loading...</div>;
+    return <div className='container'>Podaci se učitavaju, molimo Vas sačekajte!</div>;
   }
 
   return (
     <div>
-      
-      <ul>
+      <div className="text-center mt-3"><h3>Torte</h3></div>
+      <div className="torte container">
         {torte.map((torta) => (
-          <li key={torta.naziv}>
+            <a className="nav-link" href={`/${torta.id}`}>
+          <li className="nav-link" key={torta.naziv}>
             <h3>{torta.naziv}</h3>
-            <p>{torta.opis}</p>
-            <a href={`/torte/${torta.id}`} onClick={() => handleClick(torta)}>
-              Detaljnije
-            </a>
+            <p>{torta.opis}</p>            
           </li>
+          </a>
         ))}
-      </ul>
+        </div>
     </div>
   );
 }
