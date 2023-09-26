@@ -1,44 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
-import Loader from "./Loader";
+
+import { NavLink, Outlet, Navigate} from 'react-router-dom';
+
 
 function Home() {
     
-    const urlApi = "https://script.googleusercontent.com/macros/echo?user_content_key=zp6nwN5FM6Uq1fgnRQzznCykG8TmQo8pUJuLp7UykPDn4s-cV-2YND3nQaSjFz4zLspvLBN9hdEDvhVdaDUTI3jZFkyQgFXfm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnNS7UXIeGXtbZQZFLgt_THB7bUyy9Ud8UkurzdBJaU_JVyA8lKpDetryrfTQoBQqv8MXI1sJtYWf3FAx2nbSGvgRPLZHYuNsvQ&lib=MiKh8JCTgRUKxMr0TGL4E_k7ZqzPT3b1K";
-    const [torte, setTorte] = useState(null);
-
-
-    const fetchData = async () => {
-      const response = await fetch(urlApi);
-      const json = await response.json();
-      setTorte(json.data);
-    };
-
-
-    useEffect(() => {
-      fetchData();
-    }, []);
-
-   
-
-    if (!torte) {
-    return <div className='container text-center'>
-      <Loader />
-    </div>;
-  }
+  
 
   return (
     <div className="p-2">
-      <div className="text-center mt-3"><h3>Torte</h3></div>
-      <div className="torte">
-        {torte.map((torta) => (
-            <Link className="nav-link torta p-2 rounded" key={torta.Id} to={`/torte/${torta.Id}`}>
-          <li className="nav-link" >
-            <h3>{torta.Naziv}</h3>
-            <p>{torta.Opis}</p>            
-          </li>
-          </Link>
-        ))}
+      <p className='m-0 mt-2 p-1'><strong>Kategorije</strong></p>
+      <div className="categoryMenu d-flex">
+      <NavLink className="p-2 nav-link m-1 catMenu" to="/torte">Torte</NavLink>
+      <NavLink className="p-2 nav-link m-1 catMenu" to="/muffins">Muffins</NavLink>
+      </div>
+      <div className="mt-2 torte">
+      <Navigate to="/torte" replace/>
+        <Outlet/>
         </div>
     </div>
   );

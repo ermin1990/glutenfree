@@ -33,6 +33,7 @@ code {
 
 .active {
     background: #beaeae;
+    color: white;
 }
 
 .tabela {
@@ -51,4 +52,13 @@ code {
 .loader {
     width: 300px;
     height: auto;
+}
+
+.alergenInfo {
+    font-size: 1.3rem;
+    align-items: first baseline;
+}
+
+.catMenu {
+    border-radius: 10px;
 }
