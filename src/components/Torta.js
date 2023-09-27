@@ -86,7 +86,7 @@ const Torta = () => {
       {kolicina.length > 0 && (
         <>
           {kolicina.map((item) => (
-            <div key={item.opis} className='cijenaTr p-2'>
+            <div key={item.opis} className='table cijenaTr m-1 p-2'>
               {item.cijena && (
                 <div className='d-flex justify-content-between'>
                   <span>
