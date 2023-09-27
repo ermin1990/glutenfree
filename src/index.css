@@ -49,6 +49,16 @@ code {
     font-weight: bolder;
 }
 
+.cijenaTr {
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cijenaTr:hover {
+    background-color: #d4c2c2;
+}
+
 .loader {
     width: 300px;
     height: auto;
