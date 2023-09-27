@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <div className="container">
+    <div className="container col-md-6">
     <Menu/>
     <Outlet/>
     <Footer/>
