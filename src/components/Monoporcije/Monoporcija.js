@@ -2,17 +2,42 @@
 // Torta.js
 
 import { useParams } from "react-router-dom";
-import Loader from "./Loader";
+import Loader from "../Loader";
 
 import { useSelector } from "react-redux";
 
-import AlergenInfo from "./Utils/AlergenInfo";
+import { useEffect, useState } from "react";
+import AlergenInfo from "../Utils/AlergenInfo";
 
-const Torta = () => {
+
+const Keks = () => {
   const { id } = useParams();
-  const torta = useSelector((state) => state.data.data.Torte[id - 1]);
+ 
+  const monoporcija = useSelector((state) => state.data.data.Monoporcije[id - 1]);
+  const [showContent, setShowContent] = useState(false);
 
-  const dimCijeneString = torta && torta.dimCijena;
+  useEffect(() => {
+    const fetchData = async () => {
+      if (!monoporcija) {
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      }
+
+      setShowContent(true);
+    };
+
+    fetchData();
+  }, [id, monoporcija]);
+
+
+  if (!showContent) {
+    return (
+      <div className="container text-center">
+        <Loader />
+      </div>
+    );
+  }
+
+  const dimCijeneString = monoporcija && monoporcija.dimCijena;
   let dmCijene = [];
   if (dimCijeneString && dimCijeneString !== "null") {
     dmCijene = dimCijeneString.split(";").map((item) => {
@@ -21,7 +46,7 @@ const Torta = () => {
     });
   }
 
-  const kolicinaString = torta && torta.kolicina;
+  const kolicinaString = monoporcija && monoporcija.kolicina;
   let kolicina = [];
   if (kolicinaString && kolicinaString !== "null") {
     kolicina = kolicinaString.split(";").map((item) => {
@@ -30,21 +55,17 @@ const Torta = () => {
     });
   }
 
-  if (!torta) {
-    return (
-      <div className="container text-center">
-        <Loader />
-      </div>
-    );
-  }
+  
 
   return (
     <div className="p-2">
       <h1 className="text-center text-uppercase font-weight-light text-balance">
-        {torta.Naziv}
+        {monoporcija.Naziv}
       </h1>
       <hr />
-      <p className="mb-4">{torta.Opis}</p>
+      {monoporcija.Opis !== "null" && monoporcija.Opis && (
+          <p className="mb-4">{monoporcija.Opis}</p> 
+        )}
 
       <p className="text-uppercase font-weight-light">Cijene</p>
       {/* Prikazivanje cijena ukoliko postoje */}
@@ -58,7 +79,7 @@ const Torta = () => {
               {dimenzijaCijena.cijena && (
                 <div className="d-flex justify-content-between">
                   <span>
-                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${torta.visina} cm`}
+                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${monoporcija.visina} cm`}
                   </span>
                   <span className="cijenaText">
                     {dimenzijaCijena.cijena} KM
@@ -88,9 +109,9 @@ const Torta = () => {
 
       <div className="badge bg-secondary mt-2">Cijene su bez dekoracija</div>
 
-      <AlergenInfo item={torta}/>
+      <AlergenInfo item={monoporcija} />
     </div>
   );
 };
 
-export default Torta;
+export default Keks;

@@ -2,17 +2,17 @@
 // Torta.js
 
 import { useParams } from "react-router-dom";
-import Loader from "./Loader";
+import Loader from "../Loader";
 
 import { useSelector } from "react-redux";
 
-import AlergenInfo from "./Utils/AlergenInfo";
+import AlergenInfo from "../Utils/AlergenInfo";
 
-const Torta = () => {
+const Keks = () => {
   const { id } = useParams();
-  const torta = useSelector((state) => state.data.data.Torte[id - 1]);
+  const keks = useSelector((state) => state.data.data.Keksi[id - 1]);
 
-  const dimCijeneString = torta && torta.dimCijena;
+  const dimCijeneString = keks && keks.dimCijena;
   let dmCijene = [];
   if (dimCijeneString && dimCijeneString !== "null") {
     dmCijene = dimCijeneString.split(";").map((item) => {
@@ -21,7 +21,7 @@ const Torta = () => {
     });
   }
 
-  const kolicinaString = torta && torta.kolicina;
+  const kolicinaString = keks && keks.kolicina;
   let kolicina = [];
   if (kolicinaString && kolicinaString !== "null") {
     kolicina = kolicinaString.split(";").map((item) => {
@@ -30,7 +30,7 @@ const Torta = () => {
     });
   }
 
-  if (!torta) {
+  if (!keks) {
     return (
       <div className="container text-center">
         <Loader />
@@ -41,10 +41,12 @@ const Torta = () => {
   return (
     <div className="p-2">
       <h1 className="text-center text-uppercase font-weight-light text-balance">
-        {torta.Naziv}
+        {keks.Naziv}
       </h1>
       <hr />
-      <p className="mb-4">{torta.Opis}</p>
+      {keks.Opis !== "null" && keks.Opis && (
+          <p className="mb-4">{keks.Opis}</p> 
+        )}
 
       <p className="text-uppercase font-weight-light">Cijene</p>
       {/* Prikazivanje cijena ukoliko postoje */}
@@ -58,7 +60,7 @@ const Torta = () => {
               {dimenzijaCijena.cijena && (
                 <div className="d-flex justify-content-between">
                   <span>
-                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${torta.visina} cm`}
+                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${keks.visina} cm`}
                   </span>
                   <span className="cijenaText">
                     {dimenzijaCijena.cijena} KM
@@ -88,9 +90,10 @@ const Torta = () => {
 
       <div className="badge bg-secondary mt-2">Cijene su bez dekoracija</div>
 
-      <AlergenInfo item={torta}/>
+      <AlergenInfo item={keks} />
+
     </div>
   );
 };
 
-export default Torta;
+export default Keks;

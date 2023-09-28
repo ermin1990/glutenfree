@@ -2,17 +2,43 @@
 // Torta.js
 
 import { useParams } from "react-router-dom";
-import Loader from "./Loader";
+import Loader from "../Loader";
 
 import { useSelector } from "react-redux";
 
-import AlergenInfo from "./Utils/AlergenInfo";
+import { useEffect, useState } from "react";
+import AlergenInfo from "../Utils/AlergenInfo";
 
-const Torta = () => {
+
+const SlatkiSto = () => {
   const { id } = useParams();
-  const torta = useSelector((state) => state.data.data.Torte[id - 1]);
+ 
+  const item = useSelector((state) => state.data.data.SlatkiSto[id - 1]);
+  const [showContent, setShowContent] = useState(false);
 
-  const dimCijeneString = torta && torta.dimCijena;
+  useEffect(() => {
+    const fetchData = async () => {
+      if (!item) {
+        // Ako nemate podatke, sačekajte 2 sekunde prije nego što prikažete sadržaj
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      }
+
+      setShowContent(true);
+    };
+
+    fetchData();
+  }, [id, item]);
+
+
+  if (!showContent) {
+    return (
+      <div className="container text-center">
+        <Loader />
+      </div>
+    );
+  }
+
+  const dimCijeneString = item && item.dimCijena;
   let dmCijene = [];
   if (dimCijeneString && dimCijeneString !== "null") {
     dmCijene = dimCijeneString.split(";").map((item) => {
@@ -21,7 +47,7 @@ const Torta = () => {
     });
   }
 
-  const kolicinaString = torta && torta.kolicina;
+  const kolicinaString = item && item.kolicina;
   let kolicina = [];
   if (kolicinaString && kolicinaString !== "null") {
     kolicina = kolicinaString.split(";").map((item) => {
@@ -30,21 +56,17 @@ const Torta = () => {
     });
   }
 
-  if (!torta) {
-    return (
-      <div className="container text-center">
-        <Loader />
-      </div>
-    );
-  }
+  
 
   return (
     <div className="p-2">
       <h1 className="text-center text-uppercase font-weight-light text-balance">
-        {torta.Naziv}
+        {item.Naziv}
       </h1>
       <hr />
-      <p className="mb-4">{torta.Opis}</p>
+      {item.Opis !== "null" && item.Opis && (
+          <p className="mb-4">{item.Opis}</p> 
+        )}
 
       <p className="text-uppercase font-weight-light">Cijene</p>
       {/* Prikazivanje cijena ukoliko postoje */}
@@ -58,7 +80,7 @@ const Torta = () => {
               {dimenzijaCijena.cijena && (
                 <div className="d-flex justify-content-between">
                   <span>
-                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${torta.visina} cm`}
+                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${item.visina} cm`}
                   </span>
                   <span className="cijenaText">
                     {dimenzijaCijena.cijena} KM
@@ -88,9 +110,9 @@ const Torta = () => {
 
       <div className="badge bg-secondary mt-2">Cijene su bez dekoracija</div>
 
-      <AlergenInfo item={torta}/>
+     <AlergenInfo item={item} />
     </div>
   );
 };
 
-export default Torta;
+export default SlatkiSto;
