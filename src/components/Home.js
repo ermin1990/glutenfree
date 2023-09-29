@@ -36,7 +36,7 @@ function Home() {
       <p className='m-0 mt-2 p-1'><strong>Kategorije</strong></p>
       <div className="categoryMenu d-flex flex-row overflow-x-scroll">
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/torte">Torte</NavLink>
-        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/cupcakes">Cupcakes</NavLink>
+        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/keksi">Keksi</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/monoporcije">Monoporcije</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/veganske">Veganske</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/slatkisto">Slatki sto</NavLink>

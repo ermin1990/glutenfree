@@ -88,8 +88,6 @@ const Keks = () => {
         </>
       )}
 
-      <div className="badge bg-secondary mt-2">Cijene su bez dekoracija</div>
-
       <AlergenInfo item={keks} />
 
     </div>

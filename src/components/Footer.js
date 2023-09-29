@@ -16,6 +16,7 @@ const Footer = () => {
           
         </div>
       </div>
+      <div className='m-0 mt-3 opacity-25'>Created by: Ermin Selimović | Infinity Creative Studio</div>
     </footer>
   );
 };

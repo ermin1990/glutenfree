@@ -33,7 +33,7 @@ const routes = [
                     },
                     
                     {
-                        path:'/cupcakes',
+                        path:'/keksi',
                         element:<Keksi/>
                     },
                     
