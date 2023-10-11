@@ -15,19 +15,19 @@ const About = () => {
           <p>
             Zdravo, ja sam Alma Bubić, a na Instagramu me možete pronaći kao @gospodjicasarlota.
             Moja strast prema kulinarstvu, posebno slatkim kreacijama, vodi me kroz svakodnevnu
-            kulinarsku avanturu. Najveći deo svog vremena posvećujem pripremi slastica i istraživanju
+            kulinarsku avanturu. Najveći dio svog vremena posvećujem pripremi slastica i istraživanju
             novih recepata.
           </p>
           <p>
             Posebno uživam u dekorisanju kolača i torti cvjećem i čokoladnim ukrasima.
-            Prvi koraci u svetu kuvanja slastica bili su u osnovnoj školi, a tokom godina, tokom
-            studija i raznih izazova u svetu bezglutenske ishrane, moja ljubav prema kulinarstvu
+            Prvi koraci u svijetu kuhanja slastica bili su u osnovnoj školi, a tokom godina, tokom
+            studija i raznih izazova u svijetu bezglutenske ishrane, moja ljubav prema kulinarstvu
             je rasla i usavršavala se.
           </p>
           <p>
             Moja najveća inspiracija dolazi iz prirode i raznih kulinarskih tradicija koje volim
             istraživati. Trenutno se fokusiram na kreaciju slastica koje su bezglutenske i
-            posebno namenjene svima koji dele istu strast prema ukusnoj hrani.
+            posebno namjenjene svima koji dijele istu strast prema ukusnoj hrani.
           </p>
           {/* Dodajte ovde preostali tekst o Almi */}
         </div>
