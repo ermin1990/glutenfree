@@ -27,6 +27,21 @@ code {
     text-wrap: balance
 }
 
+.bg-color2 {
+    background-color: #ddcfcf;
+}
+
+.text-color1 {
+    color: #EDE0E0;
+}
+
+.opsirnije {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
 .navMenuItem:hover {
     background-color: #beaeae;
 }
@@ -36,8 +51,17 @@ code {
     color: white;
 }
 
+.decoHover:hover {
+    background-color: #beaeae;
+}
+
 .tabela {
     background-color: #EDE0E0 !important;
+}
+
+.torta {
+    background-color: #eadada;
+    position: relative;
 }
 
 .torta:hover {

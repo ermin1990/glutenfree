@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 //REDUX
 import { useSelector } from 'react-redux';
+import { MdNavigateNext } from 'react-icons/md';
 
 
 function Monoporcije() {
@@ -23,13 +24,14 @@ function Monoporcije() {
       <p className='btn btn-sm btn-secondary'>Minimalma količina za narudžbu 3 Komada </p></div>
       
       {monoporcije.map((monoporcija) => (
-        <Link className="nav-link torta p-2 rounded" key={monoporcija.Id} to={`/monoporcija/${monoporcija.Id}`}>
+        <Link className="nav-link torta p-2 m-2 rounded" key={monoporcija.Id} to={`/monoporcija/${monoporcija.Id}`}>
           <li className="nav-link" >
             <h3>{monoporcija.Naziv}</h3>
             {monoporcija.Opis !== "null" && monoporcija.Opis && (
-              <p>{monoporcija.Opis}</p>
+              <p className='p-2'>{monoporcija.Opis}</p>
             )}
           </li>
+          <span className='opsirnije'><MdNavigateNext size={25}/></span>  
         </Link>
       ))}
     <hr />

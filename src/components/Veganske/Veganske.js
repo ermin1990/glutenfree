@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 //REDUX
 import { useSelector } from 'react-redux';
+import { MdNavigateNext } from 'react-icons/md';
 
 
 function Veganske() {
@@ -21,14 +22,15 @@ function Veganske() {
     <>
     <div className="display-6 text-center">Veganske torte</div>
     {veganske.map((veganska) => (
-            <Link className="nav-link torta p-2 rounded" key={veganska.Id} to={`/veganska/${veganska.Id}`}>
+            <Link className="nav-link torta m-2 p-2 rounded" key={veganska.Id} to={`/veganska/${veganska.Id}`}>
           <li className="nav-link" >
             <h3>{veganska.Naziv}</h3>
             {veganska.Opis !== "null" && veganska.Opis && (
-          <p>{veganska.Opis}</p> 
+          <p className='p-2'>{veganska.Opis}</p> 
         )}
                        
           </li>
+          <span className='opsirnije'><MdNavigateNext size={25}/></span>  
           </Link>
         ))}
         </>

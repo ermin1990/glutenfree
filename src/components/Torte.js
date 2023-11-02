@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 //REDUX
 import { useSelector } from 'react-redux';
+import { MdNavigateNext } from 'react-icons/md';
 
 
 function Torte() {
@@ -21,10 +22,11 @@ function Torte() {
     <>
     <div className="display-6 text-center">Torte</div>
     {torte.map((torta) => (
-            <Link className="nav-link torta p-2 rounded" key={torta.Id} to={`/torta/${torta.Id}`}>
+            <Link className="nav-link torta p-2 rounded m-2" key={torta.Id} to={`/torta/${torta.Id}`}>
           <li className="nav-link" >
             <h3>{torta.Naziv}</h3>
-            <p>{torta.Opis}</p>            
+            <p className='p-3'>{torta.Opis}</p>  
+            <span className='opsirnije'><MdNavigateNext size={25}/></span>          
           </li>
           </Link>
         ))}

@@ -12,6 +12,8 @@ import Monoporcije from "../components/Monoporcije/Monoporcije";
 import Keks from "../components/Keksi/Keks";
 import SlatkiSto from "../components/SlatkiSto/SlatkiSto";
 import SlatkiStoAll from "../components/SlatkiSto/SlatkiStoAll";
+import Dekoracije from "../components/Dekoracije/Dekoracije";
+import Dekoracija from "../components/Dekoracije/Dekoracija";
 
 
 const routes = [
@@ -30,6 +32,15 @@ const routes = [
                     {
                         path: `/torta/:id`,
                         element: <Torta />,
+                    },
+                    
+                    {
+                        path:'/dekoracije',
+                        element:<Dekoracije/>,
+                    },
+                    {
+                        path: `/dekoracija/:id`,
+                        element: <Dekoracija />,
                     },
                     
                     {

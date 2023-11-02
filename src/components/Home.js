@@ -17,11 +17,6 @@ function Home() {
   }
 
 
-
-
-
-
-
   if (!data) {
     return <div className='container text-center'>
       <Loader />

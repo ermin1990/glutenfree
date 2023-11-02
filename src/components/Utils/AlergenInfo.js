@@ -18,7 +18,6 @@ function AlergenInfo({item}) {
           </div>
 
           <p>
-            Ovaj proizvod može sadržavati alergene:{" "}
             <strong>{item.Alergeni}</strong>
           </p>
         </>

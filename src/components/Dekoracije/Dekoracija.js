@@ -1,21 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 // Torta.js
 
-import { NavLink, useParams } from "react-router-dom";
-import Loader from "./Loader";
-
+import { useParams } from "react-router-dom";
 
 
 import { useSelector } from "react-redux";
 
-import AlergenInfo from "./Utils/AlergenInfo";
+import Loader from "../Loader";
 
-const Torta = () => {
+const Dekoracija = () => {
   const { id } = useParams();
-  const torta = useSelector((state) => state.data.data.Torte[id - 1]);
+  
 
+  const item = useSelector(state => state.data.data.Dekoracije[id-1]);
 
-  const dimCijeneString = torta && torta.dimCijena;
+  const dimCijeneString = item && item.dimCijena;
   let dmCijene = [];
   if (dimCijeneString && dimCijeneString !== "null") {
     dmCijene = dimCijeneString.split(";").map((item) => {
@@ -24,7 +23,7 @@ const Torta = () => {
     });
   }
 
-  const kolicinaString = torta && torta.kolicina;
+  const kolicinaString = item && item.kolicina;
   let kolicina = [];
   if (kolicinaString && kolicinaString !== "null") {
     kolicina = kolicinaString.split(";").map((item) => {
@@ -33,7 +32,7 @@ const Torta = () => {
     });
   }
 
-  if (!torta) {
+  if (!item) {
     return (
       <div className="container text-center">
         <Loader />
@@ -43,11 +42,11 @@ const Torta = () => {
 
   return (
     <div className="p-2">
-      <h1 className="text-center text-uppercase font-weight-light text-balance ">
-        {torta.Naziv}
+      <h1 className="text-center text-uppercase font-weight-light text-balance">
+        {item.Naziv}
       </h1>
       <hr />
-      <p className="mb-4">{torta.Opis}</p>
+      <p className="mb-4">{item.Opis}</p>
 
       <p className="text-uppercase font-weight-light">Cijene</p>
       {/* Prikazivanje cijena ukoliko postoje */}
@@ -61,7 +60,7 @@ const Torta = () => {
               {dimenzijaCijena.cijena && (
                 <div className="d-flex justify-content-between">
                   <span>
-                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${torta.visina} cm`}
+                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${item.visina} cm`}
                   </span>
                   <span className="cijenaText">
                     {dimenzijaCijena.cijena} KM
@@ -87,18 +86,11 @@ const Torta = () => {
             </div>
           ))}
         </>
-      )}
+      )}      
 
-      <AlergenInfo item={torta}/>
-
-      <div className="bg-secondary p-2 rounded text-center text-color1 mt-2">Cijene su bez dekoracija</div>
-
-      <div className="bg-secondary p-2 rounded mt-3 ">
-      <h4 className="mt-1 text-center text-color1 ">Odaberi dekoraciju za tortu</h4>
-      <NavLink className="p-2 px-3 nav-link m-1 bg-color2 rounded text-center decoHover" to="/dekoracije">Dekoracije</NavLink>
-      </div>
+      
     </div>
   );
 };
 
-export default Torta;
+export default Dekoracija;
