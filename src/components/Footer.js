@@ -8,12 +8,11 @@ const Footer = () => {
     <footer className="text-dark text-center py-4 ">
       <hr />
       <div className="container">
-        <div className="justify-content-evenly gap-3 d-flex flex-wrap">
+        <div className="justify-content-evenly gap-4 d-flex flex-wrap">
           
           <a className="nav-link" href="https://instagram.com/gospodjicasarlota" target="_blank" rel="noreferrer"><BsInstagram/> @gospodjicasarlota</a>
           <a className="nav-link" href="https://facebook.com/gospodjicasarlotaIIGlutenfree"><BsFacebook/> Gospođica Šarlota</a>
           <a className="nav-link" href="tel:061 946 958"><BsTelephone/>  061 946 958</a>
-          <a className="nav-link" href="viber://chat/?number=+38761946958"><FaViber/>  061 946 958</a>
           <a className="nav-link" href="sms:+387061946958;?&body=Napište koja vas torta zanima"><MdSms/> SMS 061 946 958</a>
           
         </div>
