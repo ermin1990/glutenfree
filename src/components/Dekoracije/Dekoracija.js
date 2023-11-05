@@ -60,7 +60,7 @@ const Dekoracija = () => {
               {dimenzijaCijena.cijena && (
                 <div className="d-flex justify-content-between">
                   <span>
-                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${item.visina} cm`}
+                    {`Promjer ${dimenzijaCijena.dimenzija}`}
                   </span>
                   <span className="cijenaText">
                     {dimenzijaCijena.cijena} KM

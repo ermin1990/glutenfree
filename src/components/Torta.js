@@ -19,8 +19,8 @@ const Torta = () => {
   let dmCijene = [];
   if (dimCijeneString && dimCijeneString !== "null") {
     dmCijene = dimCijeneString.split(";").map((item) => {
-      const [dimenzija, cijena] = item.split("=");
-      return { dimenzija, cijena };
+      const [dimenzija, komada, cijena] = item.split("=");
+      return { dimenzija, komada, cijena };
     });
   }
 
@@ -61,7 +61,7 @@ const Torta = () => {
               {dimenzijaCijena.cijena && (
                 <div className="d-flex justify-content-between">
                   <span>
-                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${torta.visina} cm`}
+                    {`Promjer ${dimenzijaCijena.dimenzija} | Visina ${torta.visina} cm | ${dimenzijaCijena.komada} komada`}
                   </span>
                   <span className="cijenaText">
                     {dimenzijaCijena.cijena} KM
