@@ -1,5 +1,4 @@
 import {BsFacebook, BsInstagram, BsTelephone} from 'react-icons/bs';
-import {FaViber} from 'react-icons/fa';
 import {MdSms} from 'react-icons/md';
 
 

@@ -28,9 +28,6 @@ function App() {
     fetchData();
   }, [dispatch]);
 
- 
-
-
   return (
     <>
       <div className="container col-md-6">

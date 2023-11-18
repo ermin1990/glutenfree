@@ -30,11 +30,11 @@ function Home() {
       )}
       <p className='m-0 mt-2 p-1'><strong>Kategorije</strong></p>
       <div className="categoryMenu d-flex flex-row overflow-x-scroll">
-        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/torte">Torte</NavLink>
-        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/keksi">Keksi</NavLink>
-        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/monoporcije">Monoporcije</NavLink>
-        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/veganske">Veganske</NavLink>
-        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/slatkisto">Slatki sto</NavLink>
+        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/torte"><img src="./tabs/Torte.svg" alt="Torte"/> Torte</NavLink>
+        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/keksi"><img src="./tabs/Keksi.svg" alt="Keksi" />  Keksi</NavLink>
+        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/monoporcije"><img src="./tabs/Monoporcije.svg" alt="Monoporcije" />   Monoporcije</NavLink>
+        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/veganske"><img src="./tabs/Veganske.svg" alt="Veganske" />   Veganske</NavLink>
+        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/slatkisto"><img src="./tabs/Slatkistol.svg" alt="Slatki sto" />  Slatki sto</NavLink>
       </div>
       <div className="mt-2 torte">
         {/* Obavezno ostavite <Outlet> komponentu ovde */}
