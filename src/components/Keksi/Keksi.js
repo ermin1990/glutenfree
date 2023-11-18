@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 
 //REDUX
 import { useSelector } from 'react-redux';
-import { MdNavigateNext } from 'react-icons/md';
+
+import ReadMoreIcon from '../Utils/ReadMoreIcon';
 
 
 function Keksi() {
@@ -29,7 +30,7 @@ function Keksi() {
           <p className='p-2'>{keks.Opis}</p>  
         )}            
           </li>
-          <span className='opsirnije'><MdNavigateNext size={25} /></span>
+          <span className='opsirnije'> <ReadMoreIcon/> </span>
           </Link>
         ))}
         </>

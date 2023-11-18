@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import {MdNavigateNext} from 'react-icons/md'
+import ReadMoreIcon from '../Utils/ReadMoreIcon';
 
 //REDUX
 import { useSelector } from 'react-redux';
@@ -25,7 +25,7 @@ function Dekoracije() {
           <li className="nav-link" >
             <h3>{item.Naziv}</h3>
             <p className='p-2'>{item.Opis}</p>
-            <span className='opsirnije'><MdNavigateNext size={25}/></span>            
+            <span className='opsirnije'><ReadMoreIcon /></span>            
           </li>
           </Link>
         ))}

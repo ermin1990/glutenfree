@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 //REDUX
 import { useSelector } from 'react-redux';
 import { MdNavigateNext } from 'react-icons/md';
+import ReadMoreIcon from '../Utils/ReadMoreIcon';
 
 
 function Monoporcije() {
@@ -31,7 +32,7 @@ function Monoporcije() {
               <p className='p-2'>{monoporcija.Opis}</p>
             )}
           </li>
-          <span className='opsirnije'><MdNavigateNext size={25}/></span>  
+          <span className='opsirnije'> <ReadMoreIcon/> </span>  
         </Link>
       ))}
     <hr />
