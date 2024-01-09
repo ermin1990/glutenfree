@@ -1,7 +1,7 @@
 import App from "../App";
 import About from "../components/About";
 import Home from "../components/Home";
-import Order from "../components/Order";
+import Info from "../components/Info";
 import Torta from "../components/Torta";
 import Torte from "../components/Torte";
 import Keksi from "../components/Keksi/Keksi";
@@ -14,6 +14,8 @@ import SlatkiSto from "../components/SlatkiSto/SlatkiSto";
 import SlatkiStoAll from "../components/SlatkiSto/SlatkiStoAll";
 import Dekoracije from "../components/Dekoracije/Dekoracije";
 import Dekoracija from "../components/Dekoracije/Dekoracija";
+import HowToCut from "../components/HowToCut/HowToCut";
+
 
 
 const routes = [
@@ -85,8 +87,12 @@ const routes = [
                 element: <About />,
             },
             {
-                path: `/order`,
-                element: <Order />,
+                path: `/howtocut`,
+                element: <HowToCut />,
+            },
+            {
+                path: `/info`,
+                element: <Info />,
             },
         ]
     },

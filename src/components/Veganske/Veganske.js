@@ -20,7 +20,7 @@ function Veganske() {
 
   return(
     <>
-    <div className="display-6 text-center">Veganske torte</div>
+    <div className="display-6 text-center">Veganski kutak</div>
     {veganske.map((veganska) => (
             <Link className="nav-link torta m-2 p-2 rounded" key={veganska.Id} to={`/veganska/${veganska.Id}`}>
           <li className="nav-link" >

@@ -42,7 +42,7 @@ function Home() {
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/torte"><img src={tabasIcons.torte} alt="Torte" height={20}/> Torte</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/keksi"><img src={tabasIcons.keksi} height={20} alt="Keksi" />  Keksi</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/monoporcije"><img src={tabasIcons.monoporcije} height={20} alt="Monoporcije" />   Monoporcije</NavLink>
-        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/veganske"><img src={tabasIcons.veganske} height={20} alt="Veganske" />   Veganske</NavLink>
+        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/veganske"><img src={tabasIcons.veganske} height={20} alt="Veganske" />   Veganski kutak</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/slatkisto"><img src={tabasIcons.slatkisto} height={20} alt="Slatki sto" />  Slatki sto</NavLink>
       </div>
       <div className="mt-2 torte">
