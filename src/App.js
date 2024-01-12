@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <div className="container col-md-6">
+      <div className="container col-lg-6">
         <Menu />
         <Outlet />
         <Footer />
