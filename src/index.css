@@ -13,8 +13,8 @@ code {
 }
 
 .logo {
-    width: 300px;
-    height: auto;
+    width: auto;
+    height: 22rem;
 }
 
 .navMenuItem {
@@ -46,6 +46,8 @@ code {
 
 .active {
     background: #beaeae !important;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .decoHover:hover {
@@ -148,6 +150,22 @@ code {
 *::-webkit-scrollbar-track {
     background-color: #f1f1f1;
     /* Boja track-a */
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.navbar-toggler:focus {
+    border: none !important;
+}
+
+.btn-close {
+    position: absolute;
+    top: 15px;
+    right: 10px;
 }
 
 @media (min-width: 500px) {
