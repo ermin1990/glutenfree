@@ -153,9 +153,9 @@ code {
 }
 
 .navbar-toggler {
-    position: absolute;
+    position: fixed;
     top: 15px;
-    right: 10px;
+    right: 15px;
 }
 
 .navbar-toggler:focus {
@@ -165,7 +165,7 @@ code {
 .btn-close {
     position: absolute;
     top: 15px;
-    right: 10px;
+    right: 15px;
 }
 
 @media (min-width: 500px) {

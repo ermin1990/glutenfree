@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import Logo from '../components/Logo';
 import { NavLink } from 'react-router-dom';
 import { BiSolidCake } from 'react-icons/bi';
@@ -10,9 +10,8 @@ function Menu() {
 
 
   return (
-    <nav className="navbar navbar-expand-xl position-relative">
-      <div className="container-fluid">
-        <Logo className="d-flex position-absolute" />
+    <nav className="navbar navbar-expand-md ">
+      <div className="container-fluid d-flex justify-content-center position-relative">
 
         <button
           className="navbar-toggler"
@@ -25,13 +24,13 @@ function Menu() {
         </button>
 
         <div
-          className="offcanvas offcanvas-end bg-color2 "
+          className="offcanvas offcanvas-start bg-color2 "
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title text-white d-flex m-auto" id="offcanvasNavbarLabel">
-              <Logo className="align-items-md-center" />
+            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+              <Logo className="align-items-md-center "  />
             </h5>
             <button
               type="button"
@@ -41,13 +40,13 @@ function Menu() {
             ></button>
           </div>
           <div className="offcanvas-body">
-            <ul className="navbar-nav ms-auto gap-2 d-flex flex-wrap">
+            <ul className="navbar-nav gap-2 d-flex text-center">
               <li className="nav-item catMenu" data-bs-dismiss="offcanvas" >
                 <NavLink
                   to="/"
                   className="nav-link"
                 >
-                  <BiSolidCake className='d-inlineblock d-lg-none' /> Početna
+                  <BiSolidCake /> Početna
                 </NavLink>
               </li>
               <li className="nav-item catMenu" data-bs-dismiss="offcanvas">
@@ -55,7 +54,7 @@ function Menu() {
                   to="/howtocut"
                   className="nav-link"
                 >
-                  <GiOrangeSlice className='d-inlineblock d-lg-none' /> Kako sjeći tortu
+                  <GiOrangeSlice/> Kako sjeći tortu
                 </NavLink>
               </li>
               <li className="nav-item catMenu" data-bs-dismiss="offcanvas">
@@ -63,7 +62,7 @@ function Menu() {
                   to="/about"
                   className="nav-link"
                 >
-                  <MdWoman className='d-inlineblock d-lg-none' />  O meni
+                  <MdWoman/>  O meni
                 </NavLink>
               </li>
               <li className="nav-item catMenu" data-bs-dismiss="offcanvas">
@@ -71,7 +70,7 @@ function Menu() {
                   to="/info"
                   className="nav-link"
                 >
-                  <HiClipboardList className='d-inlineblock d-lg-none' /> Važne informacije
+                  <HiClipboardList/> Važne informacije
                 </NavLink>
               </li>
             </ul>

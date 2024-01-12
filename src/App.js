@@ -5,6 +5,7 @@ import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import { setData } from './actions';
 import { useDispatch} from "react-redux";
+import Logo from "./components/Logo";
 
 
 
@@ -30,7 +31,8 @@ function App() {
 
   return (
     <>
-      <div className="container col-lg-6">
+      <div className="container col-md-9">
+        <Logo/>
         <Menu />
         <Outlet />
         <Footer />
