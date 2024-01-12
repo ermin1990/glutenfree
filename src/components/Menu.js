@@ -10,11 +10,11 @@ function Menu() {
 
 
   return (
-    <nav className="navbar navbar-expand-md ">
-      <div className="container-fluid d-flex justify-content-center position-relative">
+    <nav className="navbar navbar-expand-md">
+      <div className="container-fluid position-relative text-center">
 
         <button
-          className="navbar-toggler"
+          className="navbar-toggler bg-color2"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
@@ -29,18 +29,18 @@ function Menu() {
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+            <h5 className="offcanvas-title d-flex m-auto" id="offcanvasNavbarLabel">
               <Logo className="align-items-md-center "  />
             </h5>
             <button
               type="button"
-              className="btn-close text-white"
+              className="btn-close text-white bg-color2"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
-          <div className="offcanvas-body">
-            <ul className="navbar-nav gap-2 d-flex text-center">
+          <div className="offcanvas-body d-flex flex-row justify-content-center">
+            <ul className="navbar-nav gap-2">
               <li className="nav-item catMenu" data-bs-dismiss="offcanvas" >
                 <NavLink
                   to="/"
