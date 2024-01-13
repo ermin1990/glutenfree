@@ -37,8 +37,8 @@ function Home() {
       {navigate && (
         <Navigate to={"/torte"} />
       )}
-      <p className='m-0 mt-2 p-1'><strong>Kategorije</strong></p>
-      <div className="categoryMenu d-flex flex-row overflow-x-scroll">
+      <p className='m-0 mt-2 p-1 text-center'><strong>Kategorije</strong></p>
+      <div className="categoryMenu d-flex flex-row  overflow-x-scroll">
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/torte"><img src={tabasIcons.torte} alt="Torte" height={20}/> Torte</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/keksi"><img src={tabasIcons.keksi} height={20} alt="Keksi" />  Keksi</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/monoporcije"><img src={tabasIcons.monoporcije} height={20} alt="Monoporcije" />   Monoporcije</NavLink>

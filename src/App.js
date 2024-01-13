@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <div className="container col-md-9">
+      <div className="container col-md-6">
         <Logo/>
         <Menu />
         <Outlet />
