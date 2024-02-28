@@ -28,45 +28,45 @@ const routes = [
             {
                 path: "/",
                 element: <Home />,
-                children:[
+                children: [
                     {
-                        path:'/torte',
-                        element:<Torte/>,
+                        path: '/torte',
+                        element: <Torte />,
                     },
                     {
                         path: `/torta/:id`,
                         element: <Torta />,
                     },
-                    
+
                     {
-                        path:'/dekoracije',
-                        element:<Dekoracije/>,
+                        path: '/dekoracije',
+                        element: <Dekoracije />,
                     },
                     {
                         path: `/dekoracija/:id`,
                         element: <Dekoracija />,
                     },
-                    
+
                     {
-                        path:'/keksi',
-                        element:<Keksi/>
+                        path: '/keksi',
+                        element: <Keksi />
                     },
-                    
+
                     {
                         path: `/keks/:id`,
                         element: <Keks />,
                     },
                     {
-                        path:'/veganske',
-                        element:<Veganske/>
+                        path: '/veganske',
+                        element: <Veganske />
                     },
                     {
                         path: `/veganska/:id`,
                         element: <Veganska />,
                     },
                     {
-                        path:'/monoporcije',
-                        element:<Monoporcije/>
+                        path: '/monoporcije',
+                        element: <Monoporcije />
                     },
                     {
                         path: `/monoporcija/:id`,
@@ -74,18 +74,18 @@ const routes = [
                     },
 
                     {
-                    path:'/macaronsi',
-                        element:<Macaronsi/>
+                        path: '/macaronsi',
+                        element: <Macaronsi />
                     },
                     {
                         path: `/macaronsi/:id`,
                         element: <Macaron />,
                     }
-                    
-                    ,                    
+
+                    ,
                     {
-                        path:'/slatkisto',
-                        element:<SlatkiStoAll/>
+                        path: '/slatkisto',
+                        element: <SlatkiStoAll />
                     },
                     {
                         path: `/slatki/:id`,
@@ -93,8 +93,8 @@ const routes = [
                     },
                 ]
             },
-            
-            
+
+
             {
                 path: `/about`,
                 element: <About />,
@@ -109,7 +109,7 @@ const routes = [
             },
         ]
     },
-    
+
 ]
 
 export default routes
