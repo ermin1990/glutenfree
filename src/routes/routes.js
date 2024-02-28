@@ -15,6 +15,8 @@ import SlatkiStoAll from "../components/SlatkiSto/SlatkiStoAll";
 import Dekoracije from "../components/Dekoracije/Dekoracije";
 import Dekoracija from "../components/Dekoracije/Dekoracija";
 import HowToCut from "../components/HowToCut/HowToCut";
+import Macaronsi from "../components/Macaronsi/Macaronsi";
+import Macaron from "../components/Macaronsi/Macaron";
 
 
 
@@ -69,8 +71,19 @@ const routes = [
                     {
                         path: `/monoporcija/:id`,
                         element: <Monoporcija />,
+                    },
+
+                    {
+                    path:'/macaronsi',
+                        element:<Macaronsi/>
+                    },
+                    {
+                        path: `/macaronsi/:id`,
+                        element: <Macaron />,
                     }
-                    ,{
+                    
+                    ,                    
+                    {
                         path:'/slatkisto',
                         element:<SlatkiStoAll/>
                     },

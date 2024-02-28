@@ -20,6 +20,7 @@ function App() {
       try {
         const response = await fetch(apiAllCat);
         const newData = await response.json();
+        console.log(newData);
         dispatch(setData(newData));
       } catch (error) {
         console.error('Error fetching data:', error);
