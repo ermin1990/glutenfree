@@ -44,10 +44,12 @@ const Torta = () => {
       <hr />
       <p className="mb-4">{torta.Opis}</p>
 
-      <p className="text-uppercase font-weight-light">Cijene</p>
-      {/* Display prices if available */}
       {dmCijene.length > 0 && (
         <>
+      <p className="text-uppercase font-weight-light">Cijene</p>
+      {/* Display prices if available */}
+      
+        
           {dmCijene.map((dimenzijaCijena, index) => (
             <div key={index} className="table cijenaTr p-2 torteLista">
               {dimenzijaCijena.cijena && (
@@ -88,9 +90,12 @@ const Torta = () => {
 
       <AlergenInfo item={torta} />
 
-      <div className="bg-secondary p-2 rounded text-center text-color1 mt-2">
-        Cijene su bez dekoracija
-      </div>
+      {(dmCijene.length > 0 || kolicina.length > 0) && (
+  <div className="bg-secondary p-2 rounded text-center text-color1 mt-2">
+    Cijene su bez dekoracija
+  </div>
+)}
+      
 
       <div className="bg-secondary p-2 rounded mt-3">
         <h4 className="mt-1 text-center text-color1">Odaberi dekoraciju za tortu</h4>
