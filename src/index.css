@@ -73,6 +73,8 @@ code {
     z-index: 10;*/
 }
 
+
+
 .readMoreIcon {
     transition: ease-out 300ms;
 }
@@ -87,10 +89,15 @@ code {
     font-weight: bolder;
 }
 
+.veciFont {
+    font-size: 1.1rem;
+}
+
 .cijenaTr {
     margin-top: -10px;
     padding: 20px;
     border-radius: 5px;
+    background-color: #e5d6d6;
 }
 
 .cijenaTr:hover {
