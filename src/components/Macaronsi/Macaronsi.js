@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 //REDUX
 import { useSelector } from 'react-redux';
-import { MdNavigateNext } from 'react-icons/md';
 import ReadMoreIcon from '../Utils/ReadMoreIcon';
 
 
