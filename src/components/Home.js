@@ -8,7 +8,7 @@ function Home() {
   const tabasIcons = {
     keksi: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/Keksi.svg",
     torte: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/Torte.svg",
-    minitorte: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/minicakes.svg",
+    minitorte: "https://raw.githubusercontent.com/ermin1990/glutenfree/refs/heads/master/src/components/tabs/minicake.svg",
     monoporcije: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/Monoporcije.svg",
     icecream: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/IceCream.svg",
     sirove: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/Sirove.svg",
