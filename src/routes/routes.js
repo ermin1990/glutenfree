@@ -17,6 +17,8 @@ import Dekoracija from "../components/Dekoracije/Dekoracija";
 import HowToCut from "../components/HowToCut/HowToCut";
 import Macaronsi from "../components/Macaronsi/Macaronsi";
 import Macaron from "../components/Macaronsi/Macaron";
+import MiniTorta from "../components/MiniTorte/MiniTorta";
+import MiniTorte from "../components/MiniTorte/MiniTorte";
 
 
 
@@ -90,6 +92,15 @@ const routes = [
                     {
                         path: `/slatki/:id`,
                         element: <SlatkiSto />,
+                    },
+
+                    {
+                        path: '/minitorte',
+                        element: <MiniTorte />
+                    },
+                    {
+                        path: `/minitorte/:id`,
+                        element: <MiniTorta />,
                     },
                 ]
             },
