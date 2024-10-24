@@ -104,20 +104,8 @@ const Torta = () => {
 
       <AlergenInfo item={torta} />
 
-      {(dmCijene.length > 0 || kolicina.length > 0) && (
-  <div className="bg-secondary p-2 rounded text-center text-color1 mt-2">
-    Cijene su bez dekoracija
-  </div>
-)}
-      
+    
 
-      <div className="bg-secondary p-2 rounded mt-3">
-        <h4 className="mt-1 text-center text-color1">Odaberi dekoraciju za tortu</h4>
-        <NavLink className="p-2 px-3 nav-link m-1 bg-color2 rounded text-center decoHover" to="/dekoracije">
-          Dekoracije
-        </NavLink>
-      </div>
-    </div>
   );
 };
 
