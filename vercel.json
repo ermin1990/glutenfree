@@ -1,15 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build",
-        "nodeVersion": "22.x"
-      }
-    }
-  ],
   "routes": [
     {
       "src": "/sitemap.xml",
@@ -23,9 +13,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "regions": ["fra1"],
-  "outputDirectory": "build",
-  "buildCommand": "npm run build",
-  "installCommand": "npm install"
+  ]
 }
