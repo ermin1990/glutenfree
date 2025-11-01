@@ -5,8 +5,7 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build",
-        "nodeVersion": "22.x"
+        "distDir": "build"
       }
     }
   ],
@@ -32,8 +31,5 @@
   "regions": ["fra1"],
   "outputDirectory": "build",
   "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "engines": {
-    "node": "22.x"
-  }
+  "installCommand": "npm install"
 }
