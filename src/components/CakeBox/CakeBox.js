@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 //REDUX
 import { useSelector } from 'react-redux';
 import ReadMoreIcon from '../Utils/ReadMoreIcon';
+import SEO from '../SEO';
 
 
 function CakeBox() {
@@ -19,6 +20,12 @@ function CakeBox() {
 
   return (
     <>
+      <SEO
+        title="Cake Box - Gluten Free Cake Box"
+        description="Gluten free cake box proizvodi. Bezglutenski kolači i slatkiši u praktičnom pakovanju. Minimalna narudžba 6 komada."
+        keywords="cake box, gluten free cake box, bezglutenski cake box, pakovani slatkiši"
+        url="cake-box"
+      />
       <div className="display-6 text-center">Cake box <br />
       <p className='btn btn-sm btn-secondary'>Minimalna količina za narudžbu 6 Komada </p></div>
 

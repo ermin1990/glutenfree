@@ -2,6 +2,7 @@ import { NavLink, Navigate, Outlet, useLocation } from "react-router-dom";
 
 import Loader from "./Loader";
 import { useSelector } from 'react-redux';
+import SEO from './SEO';
 
 function Home() {
 
@@ -37,6 +38,11 @@ function Home() {
 
   return (
     <div className="p-2">
+      <SEO
+        title="Početna - Gluten Free Torte i Slatkiši"
+        description="Dobrodošli u Gospođicu Šarlotu - vašeg specijalistu za gluten free torte, monoporcije, keksi i macaronsi. Naručite bezglutenske slatkiše iz Tuzle."
+        keywords="gluten free, bezglutenski, torte, monoporcije, keksi, macaronsi, veganski, tuzla"
+      />
       {navigate && (
         <Navigate to={"/torte"} />
       )}

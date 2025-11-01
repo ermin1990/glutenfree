@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 //REDUX
 import { useSelector } from 'react-redux';
 import ReadMoreIcon from '../Utils/ReadMoreIcon';
+import SEO from '../SEO';
 
 
 function Monoporcije() {
@@ -20,6 +21,12 @@ function Monoporcije() {
 
   return (
     <>
+      <SEO
+        title="Entremet Monoporcije - Gluten Free Monoporcije"
+        description="Ukusne gluten free entremet monoporcije. Bezglutenske monoporcije sa premium sastojcima. Minimalna narudžba 3 komada."
+        keywords="entremet monoporcije, gluten free monoporcije, bezglutenske monoporcije, deserti"
+        url="entremet-monoporcije"
+      />
       <div className="display-6 text-center">Entremet monoporcije <br />
       <p className='btn btn-sm btn-secondary'>Minimalma količina za narudžbu 3 Komada </p></div>
       

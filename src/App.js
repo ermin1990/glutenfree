@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { setData } from './actions';
 import { useDispatch} from "react-redux";
 import Logo from "./components/Logo";
+import { HelmetProvider } from 'react-helmet-async';
 
 
 
@@ -30,14 +31,14 @@ function App() {
   }, [dispatch]);
 
   return (
-    <>
+    <HelmetProvider>
       <div className="container col-md-6">
         <Logo/>
         <Menu />
         <Outlet />
         <Footer />
       </div>
-    </>
+    </HelmetProvider>
   );
 }
 
