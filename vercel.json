@@ -24,11 +24,6 @@
       "dest": "/index.html"
     }
   ],
-  "functions": {
-    "src/pages/api/**/*.js": {
-      "runtime": "@vercel/node"
-    }
-  },
   "regions": ["fra1"],
   "outputDirectory": "build",
   "buildCommand": "npm run build",
