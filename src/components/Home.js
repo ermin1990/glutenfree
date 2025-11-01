@@ -13,7 +13,8 @@ function Home() {
     icecream: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/IceCream.svg",
     sirove: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/Sirove.svg",
     slatkisto: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/Slatkistol.svg",
-    veganske: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/Veganske.svg"
+    veganske: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/Veganske.svg",
+    cakebox: "https://raw.githubusercontent.com/ermin1990/glutenfree/master/src/components/tabs/cakebox.svg"
   }
 
   const data = useSelector((state) => state.data);
@@ -44,7 +45,8 @@ function Home() {
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/torte"><img src={tabasIcons.torte} alt="Torte" height={20} /> Torte</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/minitorte"><img src={tabasIcons.minitorte} alt="Torte" height={20} /> Mini Torte</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/keksi"><img src={tabasIcons.keksi} height={20} alt="Keksi" />  Keksi</NavLink>
-        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/monoporcije"><img src={tabasIcons.icecream} height={20} alt="Monoporcije" />   Monoporcije</NavLink>
+        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/entremet-monoporcije"><img src={tabasIcons.icecream} height={20} alt="Entremet monoporcije" />   Entremet monoporcije</NavLink>
+        <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/cake-box"><img src={tabasIcons.cakebox} height={20} alt="Cake box" />   Cake box</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/macaronsi"><img src={tabasIcons.monoporcije} height={20} alt="Macaronsi" />   Macaronsi</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/veganske"><img src={tabasIcons.veganske} height={20} alt="Veganske" />   Veganski kutak</NavLink>
         <NavLink className="p-2 px-3 nav-link m-1 catMenu" to="/slatkisto"><img src={tabasIcons.slatkisto} height={20} alt="Slatki sto" />  Slatki sto</NavLink>

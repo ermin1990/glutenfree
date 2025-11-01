@@ -13,7 +13,7 @@ import AlergenInfo from "../Utils/AlergenInfo";
 const Keks = () => {
   const { id } = useParams();
  
-  const monoporcija = useSelector((state) => state.data.data.Monoporcije[id - 1]);
+  const monoporcija = useSelector((state) => state.data.data.Entremetmonoporcije[id - 1]);
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {

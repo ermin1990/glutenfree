@@ -9,6 +9,8 @@ import Veganske from "../components/Veganske/Veganske";
 import Veganska from "../components/Veganske/Veganska";
 import Monoporcija from "../components/Monoporcije/Monoporcija";
 import Monoporcije from "../components/Monoporcije/Monoporcije";
+import CakeBox from "../components/CakeBox/CakeBox";
+import CakeBoxItem from "../components/CakeBox/CakeBoxItem";
 import Keks from "../components/Keksi/Keks";
 import SlatkiSto from "../components/SlatkiSto/SlatkiSto";
 import SlatkiStoAll from "../components/SlatkiSto/SlatkiStoAll";
@@ -67,12 +69,20 @@ const routes = [
                         element: <Veganska />,
                     },
                     {
-                        path: '/monoporcije',
+                        path: '/entremet-monoporcije',
                         element: <Monoporcije />
                     },
                     {
-                        path: `/monoporcija/:id`,
+                        path: `/entremet-monoporcija/:id`,
                         element: <Monoporcija />,
+                    },
+                    {
+                        path: '/cake-box',
+                        element: <CakeBox />
+                    },
+                    {
+                        path: `/cake-box/:id`,
+                        element: <CakeBoxItem />,
                     },
 
                     {

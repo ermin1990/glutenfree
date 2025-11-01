@@ -10,7 +10,7 @@ import ReadMoreIcon from '../Utils/ReadMoreIcon';
 
 function Monoporcije() {
 
-  const monoporcije = useSelector(state => state.data.data.Monoporcije);
+  const monoporcije = useSelector(state => state.data.data.Entremetmonoporcije);
 
   if (!monoporcije) {
     return <div className='container text-center'>
@@ -20,11 +20,11 @@ function Monoporcije() {
 
   return (
     <>
-      <div className="display-6 text-center">Monoporcije <br />
+      <div className="display-6 text-center">Entremet monoporcije <br />
       <p className='btn btn-sm btn-secondary'>Minimalma količina za narudžbu 3 Komada </p></div>
       
       {monoporcije.map((monoporcija) => (
-        <Link className="nav-link torta p-2 m-2 rounded" key={monoporcija.Id} to={`/monoporcija/${monoporcija.Id}`}>
+        <Link className="nav-link torta p-2 m-2 rounded" key={monoporcija.Id} to={`/entremet-monoporcija/${monoporcija.Id}`}>
           <li className="nav-link" >
             <h3>{monoporcija.Naziv}</h3>
             {monoporcija.Opis !== "null" && monoporcija.Opis && (

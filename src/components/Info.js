@@ -31,7 +31,7 @@ U slučaju da šaljete nekoga po tortu, naglasite koliko je bitno da se vozi pa�
 <div className="sekcija p-2">
     <div className="display-6 text-center">Rok trajanja</div>
     <p><ul>
-  <li>Torte i monoporcije čuvajte u frižderu u zvonu za torte ili zatvorenoj kutiji.</li>
+  <li>Torte i entremet monoporcije čuvajte u frižderu u zvonu za torte ili zatvorenoj kutiji.</li>
   <li>Rok trajanja voćnih torti je 3 dana od dana preuzimanja, a čokoladnih 4 dana.</li>
   <li>Keksiće poput raspucanaca čuvajte u metalnoj kutiji na sobnoj temperaturi.</li>
   <li>Linzere, sacher kekse i kuglice čuvajte u metalnim kutijama u frižideru.</li>

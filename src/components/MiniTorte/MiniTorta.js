@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 // Torta.js
 
-import { NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Loader from "../Loader";
 import { useSelector } from "react-redux";
 import AlergenInfo from "../Utils/AlergenInfo";

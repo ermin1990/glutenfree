@@ -16,7 +16,7 @@ const Footer = () => {
           
         </div>
       </div>
-      <a href="https://www.instagram.com/weddings_infinity/" target="_blank" rel="noreferrer" className='m-0 mt-3 opacity-25 nav-link'>Created by: Ermin Selimović | Infinity Creative Studio</a>
+      <a href="https://www.instagram.com/infinitycreative.agency/" target="_blank" rel="noreferrer" className='m-0 mt-3 opacity-25 nav-link'>Created by: Ermin Selimović | Infinity Creative Studio</a>
     </footer>
   );
 };
